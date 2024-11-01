@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataCollect</title>
+    <link rel="stylesheet" href="/assest/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="../assest/styles/style.css">
+</head>
+<body class="bg-dark text-light">
+    <header>
+        <nav class="navbar navbar-expand-sm  navbar-dark ">
+          <div class="container-fluid">
+           <img src="../assest/images/LogoDataCollect.png" class="navbar-Logo LogoDataCollect" alt="DClogo">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav">
+                <li class="nav-item ms-5">
+                  <a class="nav-link" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item ms-5">
+                  <a class="nav-link" href="../index.html">Blog</a>
+                </li>
+                <li class="nav-item ms-5">
+                  <a class="nav-link" href="../index.html">About</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+    <section class=" container text-center">
+        <form class="Grandform m-5" action="" onsubmit="AlertForm(event)">
+            <div class="form" id="form1">
+                <h3 class="titelform text-center">Information Perssonnelles</h3>
+                <fieldset class="container m-2 p-2 rounded">
+                    <label class="form-label" for="nom">Nom:</label>
+                    <input class="form-control"  onchange="validateName()" type="text" id="nom" placeholder="Enter your Name" required>
+                    <span id="NameError" class="text-danger d-none d-block">Invalid Name </span>
+                    <label class="form-label" for="age">Age:</label>
+                    <input class="form-control" onchange="validateAge()" type="number" id="age" placeholder="Enter your Age" required>
+                    <span id="NameError" class="text-danger mb-3 d-none d-block">Invalid Age </span>
+                    <button class="btn btn-outline-primary mt-2" type="reset">RESET DATA</button>
+                </fieldset>
+                <div class=" m-3 d-flex justify-content-between">
+                    <button class="btn btn-outline-primary" onclick="ferstPrev()">&Lt; PREV</button>
+                    <button class="btn btn-outline-primary" onclick="nextForm(2)">NEXT &Gt;</button>
+                </div>
+            </div>
+            <div class="form d-none" id="form2">
+                <h3 class="titelform">Contact Professionnel</h3>
+                <fieldset class="container m-2 p-2 rounded">
+                    <label class="form-label" for="email">E-mail:</label>
+                    <input class="form-control"  onchange="validateEmail()" id="email" type="text" placeholder="Enter your Email" required>
+                    <span id="emailError" class="text-danger d-none d-block">Invalid email address</span>
+                    <label class="form-label" for="tele">N Tele:</label>
+                    <input class="form-control" onchange="validatePhone()" id="tele" type="number" placeholder="Enter your Number" required>
+                    <span id="emailError" class="text-danger mb-3 d-none d-block">Invalid Number phone</span>
+                    <button class="btn btn-outline-primary mt-2" type="reset">RESET DATA</button>
+                </fieldset>
+                <div class=" m-3 d-flex justify-content-between">
+                    <button class="btn btn-outline-primary" onclick="prevForm(1)">&Lt; PREV</button>
+                    <button class="btn btn-outline-primary" onclick="nextForm(3)">NEXT  &Gt;</button>
+                </div>
+            </div>
+            <div class="form d-none" id="form3">
+                <h3 class="titelform">Retour D'Expérience</h3>
+                <fieldset class="container  m-2 p-2 rounded">
+                    <label class="form-label" for="comment">Retour Expérience</label>
+                    <textarea class="form-control" onchange="validateComment()" name="comment" id="comment"
+                        placeholder="commentaires sur la satisfaction au travail"></textarea>
+                    <span id="emailError" class="text-danger mb-3 d-none d-block">Invalid comment</span>
+                    <button class="btn btn-outline-primary mt-2" type="reset">RESET DATA</button>
+                    <button class="btn btn-outline-primary mt-2" type="button">SEVG DATA</button>
+                </fieldset>
+                <div class=" m-3 d-flex justify-content-between">
+                    <button class="btn btn-outline-primary" onclick="prevForm(2)">&Lt;  PREV</button>
+                    <button class="btn btn-outline-primary" type="submit">SEND DATA</button>
+                </div>
+            </div>
+        </form>
+    </section>
+    <script src="../assest/scripts/main.js"></script>
+</body>
+
+</html>
