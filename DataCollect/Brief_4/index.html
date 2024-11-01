@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataCollect</title>
+    <link rel="stylesheet" href="/assest/styles/bootstrap.min.css">
+    <script src="assest/scripts/main.js"></script>
+</head>
+
+<body class="bg-dark text-light">
+    <section class=" container text-center">
+        <form class="Grandform" action="post" onsubmit="AlertForm(event)">
+            <div class="form" id="form1">
+                <h1 class="text-info text-center">Information Perssonnelles</h1>
+                <fieldset class="container border border-info m-2 p-2 rounded">
+                    <label class="form-label" for="nom">Nom:</label>
+                    <input class="form-control" type="text" id="nom" placeholder="Enter your Name" required>
+                    <span id="NameError" class="text-danger d-none d-block">Invalid Name </span>
+                    <label class="form-label" for="age">Age:</label>
+                    <input class="form-control mb-3" type="number" id="age" placeholder="Enter your Age" required>
+                    <button class="btn btn-outline-info" type="button">SEVG DATA</button>
+                    <button class="btn btn-outline-info " type="reset">RESET DATA</button>
+                </fieldset>
+                <div class=" m-3 d-flex justify-content-between">
+                    <button class="btn btn-outline-info">&Lt; PREV</button>
+                    <button class="btn btn-outline-info " onclick="nextForm(2)">NEXT &Gt;</button>
+                </div>
+            </div>
+            <div class="form d-none" id="form2">
+                <h1 class=" text-info">Contact Professionnel</h1>
+                <fieldset class="container border border-info m-2 p-2 rounded">
+                    <label class="form-label" for="email">E-mail:</label>
+                    <input class="form-control" id="email" type="text" placeholder="Enter your Email" required>
+                    <span id="emailError" class="text-danger d-none d-block">Invalid email address</span>
+                    <label class="form-label" for="tele">N Tele:</label>
+                    <input class="form-control  mb-3" id="tele" type="number" placeholder="Enter your Number" required>
+                    <button class="btn btn-outline-info" type="button">SEVG DATA</button>
+                    <button class="btn btn-outline-info" type="reset">RESET DATA</button>
+                </fieldset>
+                <div class=" m-3 d-flex justify-content-between">
+                    <button class="btn btn-outline-info" onclick="prevForm(1)">&larr; PREV</button>
+                    <button class="btn btn-outline-info" onclick="nextForm(3)">NEXT &rarr;</button>
+                </div>
+            </div>
+            <div class="form d-none" id="form3">
+                <h1 class="text-info">Retour D'Expérience</h1>
+                <fieldset class="container border border-info m-2 p-2 rounded">
+                    <label class="form-label" for="comment">Retour Expérience</label>
+                    <textarea class="form-control  mb-3" name="comment" id="comment"
+                        placeholder="commentaires sur la satisfaction au travail"></textarea>
+                    <button class="btn btn-outline-info" type="button">SEVG DATA</button>
+                    <button class="btn btn-outline-info" type="reset">RESET DATA</button>
+                </fieldset>
+                <div class=" m-3 d-flex justify-content-between">
+                    <button class="btn btn-outline-info" onclick="prevForm(2)">&#x21A9; PREV</button>
+                    <button class="btn btn-info" type="submit">SEND DATA</button>
+                    <button class="btn btn-outline-info "> NEXT &#x21AA;</button>
+                </div>
+            </div>
+        </form>
+    </section>
+    <script src="assest/scripts/main.js"></script>
+</body>
+
+</html>
